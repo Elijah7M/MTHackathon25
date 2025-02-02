@@ -257,3 +257,7 @@ footer {
   align-items: center;
   margin-top: 0.5rem;
 }
+
+#careerGoalContainer {
+  font-size: 1.2rem; /* You can adjust the value as desired */
+}

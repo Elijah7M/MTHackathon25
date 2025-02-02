@@ -262,18 +262,9 @@ if (analyzeButton) {
       );
       renderJobs(sortedJobs);
 
-      // Populate user summary and career goal
-      const summaryContainer = document.getElementById("userSummaryContainer");
+      // Populate career goal section only
       const careerGoalContainer = document.getElementById("careerGoalContainer");
-      if (summaryContainer && careerGoalContainer && data.userSummary) {
-        summaryContainer.innerHTML = `
-          <h3>User Summary</h3>
-          <p><strong>Achievements:</strong> ${data.userSummary.achievements}</p>
-          <p><strong>Skills:</strong> ${data.userSummary.skills}</p>
-          <p><strong>Education:</strong> ${data.userSummary.education}</p>
-          <p><strong>Improvement Suggestions:</strong> ${data.userSummary.improvements}</p>
-        `;
-
+      if (careerGoalContainer && data.userSummary) {
         careerGoalContainer.innerHTML = `
           <h3>Career Goal</h3>
           <p><strong>Target Role:</strong> ${data.userSummary.careerGoal.title}</p>
@@ -283,6 +274,7 @@ if (analyzeButton) {
           <p><strong>Experience Required:</strong> ${data.userSummary.careerGoal.experience}</p>
         `;
       }
+
 
       // Store userId for later use
       regenerateButton.dataset.userid = data.userId;
